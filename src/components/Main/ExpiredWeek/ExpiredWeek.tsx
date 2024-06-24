@@ -5,14 +5,16 @@ import DevCard from "../DevCard/DevCard";
 const dummyDevs = Object.keys(TEAM_COLORS);
 
 type Props = {
-    from: string;
-    to: string;
-}
+  from: string;
+  to: string;
+};
 
 export default function ExpiredWeek(props: ParentProps<Props>) {
   return (
-    <li>
-    <h2 class="text-xl border-b-4 border-b-stone-800 sketched-line">Week {props.from}-{props.to}</h2>
+    <li class="flex flex-col gap-4">
+      <h2 class="sketched-line border-b-4 border-b-stone-800 text-xl">
+        Week {props.from}-{props.to}
+      </h2>
       <ul class="flex gap-4">
         <For each={dummyDevs}>
           {(dev) => (
