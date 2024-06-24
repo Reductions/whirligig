@@ -1,13 +1,19 @@
-import { For } from "solid-js";
+import { For, ParentProps } from "solid-js";
 import { TEAM_COLORS } from "~/constants/constants";
 import DevCard from "../DevCard/DevCard";
 
 const dummyDevs = Object.keys(TEAM_COLORS);
 
-export default function ExpiredWeek() {
+type Props = {
+    from: string;
+    to: string;
+}
+
+export default function ExpiredWeek(props: ParentProps<Props>) {
   return (
     <li>
-      <ul>
+    <h2 class="text-xl border-b-4 border-b-stone-800 sketched-line">Week {props.from}-{props.to}</h2>
+      <ul class="flex gap-4">
         <For each={dummyDevs}>
           {(dev) => (
             <DevCard

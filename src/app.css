@@ -16,4 +16,9 @@
     border-bottom-left-radius: 110px 19px;
     border-bottom-right-radius: 120px 24px;
   }
+
+  .sketched-line {
+    border-bottom-left-radius: 200px 8px;
+    border-bottom-right-radius: 400px 6px;
+  }
 }
