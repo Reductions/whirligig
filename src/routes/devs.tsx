@@ -1,9 +1,9 @@
 import Page from "~/components/PageLayout/PageLayout";
 
-export default function Home() {
+export default function Devs() {
   return (
     <Page>
-      <h1 class="font-bold text-xl">Weekly rotation:</h1>
+      <h1 class="font-bold text-xl">Devs:</h1>
     </Page>
   );
 }
