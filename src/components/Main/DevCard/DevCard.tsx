@@ -15,6 +15,7 @@ export default function DevCard(props: ParentProps<Props>) {
         <img
           class={`rounded-xl border bg-amber-100 sketched-border-2 border-stone-800`}
           src={`https://robohash.org/${props.id}/?set=set4&size=60x60`}
+          alt={`Avatar of ${props.name}`}
         />
         <div class="flex flex-col justify-center">
           <div>Name: {props.name}</div>
