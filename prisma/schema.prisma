@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db/dev.db"
+}
+
+model Dev {
+  id        Int     @id @default(autoincrement())
+  firstName String
+  lastName  String
+  techLead  Boolean
+  active    Boolean @default(true)
+
+  currentTeam Team @relation(fields: [teamId], references: [id])
+  teamId      Int
+
+  RotationPartisipation RotationPartisipation[]
+}
+
+model Team {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  color String @unique
+
+  currentMermvers Dev[]
+
+  RotationPartisipation RotationPartisipation[]
+}
+
+model RotationPartisipation {
+  weekStartData DateTime
+
+  dev   Dev @relation(fields: [devId], references: [id])
+  devId Int
+
+  team   Team @relation(fields: [teamId], references: [id])
+  teamId Int
+
+  onRotation Boolean @default(false)
+
+  @@unique([weekStartData, devId])
+}
