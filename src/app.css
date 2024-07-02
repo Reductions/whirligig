@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .sketched-border-1 {
+    border-top-left-radius: 234px 33px;
+    border-top-right-radius: 160px 40px;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 14px 200px;
+  }
+
+  .sketched-border-2 {
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+  }
+
+  .sketched-line {
+    border-bottom-left-radius: 200px 8px;
+    border-bottom-right-radius: 400px 6px;
+  }
+}
