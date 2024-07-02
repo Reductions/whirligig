@@ -1,6 +1,7 @@
 import { For, ParentProps } from "solid-js";
 import { createMockDev } from "~/mocks";
 import DevCard from "../DevCard";
+import Section from "../Section";
 
 type Props = {
   from: string;
@@ -15,10 +16,7 @@ export default function ExpiredWeek(props: ParentProps<Props>) {
 
   return (
     <li class="flex flex-col gap-4">
-      <h2 class="sketched-line border-b-4 border-b-stone-800 text-xl">
-        Week {props.from}-{props.to}
-      </h2>
-      <ul class="flex gap-4">
+      <Section header={`Week ${props.from}-${props.to}`}>
         <For each={devs}>
           {(dev) => (
             <DevCard
@@ -29,7 +27,7 @@ export default function ExpiredWeek(props: ParentProps<Props>) {
             />
           )}
         </For>
-      </ul>
+      </Section>
     </li>
   );
 }
