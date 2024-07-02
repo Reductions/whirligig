@@ -1,6 +1,6 @@
 import { For, ParentProps } from "solid-js";
-import DevCard from "../DevCard/DevCard";
 import { createMockDev } from "~/mocks";
+import DevCard from "../DevCard";
 
 type Props = {
   from: string;

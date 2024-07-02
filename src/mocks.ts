@@ -23,17 +23,17 @@ const lastNamesMock = [
 
 const teamNamesMock = ["Gazey", "Aleko", "Ruen", "FE", "Strazhnik"];
 
-const mockTeams = teamNamesMock.map(n => ({
+export const mockTeams = teamNamesMock.map(n => ({
     id: `${Math.random() * 100}`,
     name: n,
     color: Object.keys(TEAM_COLORS)[Math.floor(Math.random()*Object.keys(TEAM_COLORS).length)]
 }))
 
-export const createMockDev = () => ({
+export const createMockDev = (team?: typeof mockTeams[number]) => ({
     id : `${Math.random() * 100}`,
     firstName : firstNamesMock[Math.floor(Math.random() * firstNamesMock.length)],
     lastName : lastNamesMock[Math.floor(Math.random() * lastNamesMock.length)],
     techLead : Boolean(Math.round(Math.random())),
     active : Boolean(Math.round(Math.random())),
-    team : mockTeams[Math.floor(Math.random() * mockTeams.length)]
+    team : team || mockTeams[Math.floor(Math.random() * mockTeams.length)]
 })
