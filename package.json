@@ -2,6 +2,8 @@
   "name": "example-with-tailwindcss",
   "type": "module",
   "scripts": {
+    "prisma:gen": "prisma generate",
+    "prisma:migrate": "prisma db push",
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start"
