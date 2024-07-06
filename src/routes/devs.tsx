@@ -1,9 +1,9 @@
-import Page from "~/components/PageLayout/PageLayout";
+import PageLayout from "~/components/PageLayout";
 
 export default function Devs() {
   return (
-    <Page>
+    <PageLayout>
       <h1 class="font-bold text-xl">Devs:</h1>
-    </Page>
+    </PageLayout>
   );
 }
