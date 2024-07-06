@@ -1,10 +1,10 @@
-import WeekList from "~/components/Main/WeekList/WeekList";
-import Page from "~/components/PageLayout/PageLayout";
+import PageLayout from "~/components/PageLayout";
+import WeekList from "~/components/WeekList";
 
 export default function Home() {
   return (
-    <Page>
+    <PageLayout>
       <WeekList />
-    </Page>
+    </PageLayout>
   );
 }

@@ -1,9 +1,10 @@
-import Page from "~/components/PageLayout/PageLayout";
+import PageLayout from "~/components/PageLayout";
+import TeamsPage from "~/components/Teams";
 
 export default function Teams() {
   return (
-    <Page>
-      <h1 class="font-bold text-xl">Teams:</h1>
-    </Page>
+    <PageLayout>
+      <TeamsPage />
+    </PageLayout>
   );
 }
