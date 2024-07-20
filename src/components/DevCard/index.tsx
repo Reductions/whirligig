@@ -10,7 +10,7 @@ type Props = {
 
 export default function DevCard(props: ParentProps<Props>) {
   return (
-    <li class={`sketched-border-2 border-2 border-stone-800 ${TEAM_COLORS[props.teamColor]}`}>
+    <li class={`w-max sketched-border-2 border-2 border-stone-800 ${TEAM_COLORS[props.teamColor]}`}>
       <div class={`flex w-max gap-4 rounded-xl border-2 border-stone-800 p-4 sketched-border-1 ${TEAM_COLORS[props.teamColor]}`}>
         <img
           class={`rounded-xl border bg-amber-100 sketched-border-2 border-stone-800 w-16 h-16`}
