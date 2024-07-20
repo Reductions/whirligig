@@ -7,3 +7,5 @@ export const TEAM_COLORS = {
   blue: "bg-blue-500",
   pink: "bg-pink-500",
 } as const;
+
+export const TEAM_NAME_PATTERN = '^[a-zA-Z]+$'
