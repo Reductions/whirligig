@@ -8,7 +8,11 @@ import DevCard from "../DevCard";
 import { Button } from "~/Button";
 import { createTeam } from "~/lib/team/create";
 
-export default function AddTeam() {
+type Props = {
+    refetchTeams: () => void
+}
+
+export default function AddTeam(props: Props) {
   let modalRef!: HTMLDialogElement;
 
   const [selectedColor, setSelectedColor] = createSignal<
@@ -72,7 +76,7 @@ export default function AddTeam() {
           </ul>
           <Button
             onClick={() =>
-              createTeam({ name: teamName(), color: selectedColor() })
+              createTeam({ name: teamName(), color: selectedColor() }).then(() => props.refetchTeams())
             }
           >
             Submit

@@ -8,4 +8,6 @@ export const TEAM_COLORS = {
   pink: "bg-pink-500",
 } as const;
 
-export const TEAM_NAME_PATTERN = '^[a-zA-Z]+$'
+export const TEAM_NAME_PATTERN = "^[a-zA-Z]+$";
+
+export const DEV_NAME_PATTERN = "^[a-zA-Z]+$";

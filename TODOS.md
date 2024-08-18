@@ -1,2 +1,2 @@
-- [] Find out how to invalidate queried data
-- [] Find out how to get correct color type from request
+- [] Find out how to get correct color on initial addDev open
+- [] Show tech lead in dev card
