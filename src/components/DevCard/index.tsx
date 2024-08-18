@@ -4,7 +4,7 @@ import { TEAM_COLORS } from "~/constants/constants";
 type Props = {
   name: string;
   team: string;
-  id: string;
+  id: number;
   teamColor: keyof typeof TEAM_COLORS;
 };
 

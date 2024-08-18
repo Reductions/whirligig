@@ -29,7 +29,7 @@ export const mockTeams = teamNamesMock.map(n => ({
     color: Object.keys(TEAM_COLORS)[Math.floor(Math.random()*Object.keys(TEAM_COLORS).length)]
 }))
 
-export const createMockDev = (team?: typeof mockTeams[number]) => ({
+export const createMockDev = (team?: {id: number, name: string; color: string}) => ({
     id : `${Math.random() * 100}`,
     firstName : firstNamesMock[Math.floor(Math.random() * firstNamesMock.length)],
     lastName : lastNamesMock[Math.floor(Math.random() * lastNamesMock.length)],

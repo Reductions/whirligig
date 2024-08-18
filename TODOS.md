@@ -1,0 +1,2 @@
+- [] Find out how to get correct color on initial addDev open
+- [] Show tech lead in dev card
