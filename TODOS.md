@@ -1,0 +1,2 @@
+- [] Find out how to invalidate queried data
+- [] Find out how to get correct color type from request

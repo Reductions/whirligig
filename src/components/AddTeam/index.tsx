@@ -6,6 +6,7 @@ import { TEAM_COLORS, TEAM_NAME_PATTERN } from "~/constants/constants";
 import { createSignal, For } from "solid-js";
 import DevCard from "../DevCard";
 import { Button } from "~/Button";
+import { createTeam } from "~/lib/team/create";
 
 export default function AddTeam() {
   let modalRef!: HTMLDialogElement;
@@ -27,7 +28,12 @@ export default function AddTeam() {
         Add team
       </Button>
       <Modal ref={modalRef} title="Add team:" onClose={() => modalRef.close()}>
-        <Form name="addTeam" onSubmit={() => {modalRef.close()}}>
+        <Form
+          name="addTeam"
+          onSubmit={() => {
+            modalRef.close();
+          }}
+        >
           <LabelInput
             title="Name:"
             required={true}
@@ -64,7 +70,13 @@ export default function AddTeam() {
               name="ExampleDev"
             />
           </ul>
-          <Button onClick={() => {}}>Submit</Button>
+          <Button
+            onClick={() =>
+              createTeam({ name: teamName(), color: selectedColor() })
+            }
+          >
+            Submit
+          </Button>
         </Form>
       </Modal>
     </>

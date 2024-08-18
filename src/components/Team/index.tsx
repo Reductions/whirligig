@@ -1,10 +1,10 @@
 import { For, ParentProps } from "solid-js";
-import { createMockDev, mockTeams } from "~/mocks";
+import { createMockDev } from "~/mocks";
 import DevCard from "../DevCard";
 import Section from "../Section";
 
 type Props = {
-  team: (typeof mockTeams)[number];
+  team: {id: number, name: string; color: string };
 };
 
 export default function Team(props: ParentProps<Props>) {
