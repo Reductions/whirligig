@@ -2,6 +2,7 @@ import { For, ParentProps } from "solid-js";
 import { createMockDev } from "~/mocks";
 import DevCard from "../DevCard";
 import Section from "../Section";
+import { TEAM_COLORS } from "~/constants/constants";
 
 type Props = {
   from: string;
@@ -21,7 +22,7 @@ export default function ExpiredWeek(props: ParentProps<Props>) {
           {(dev) => (
             <DevCard
               id={dev.id}
-              teamColor={dev.team.color}
+              teamColor={dev.team.color as keyof typeof TEAM_COLORS}
               team={dev.team.name}
               name={`${dev.firstName} ${dev.lastName}`}
             />
